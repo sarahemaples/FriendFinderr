@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Survey Questions</h2>
+        <hr>
+        <h3>About you</h3>
+        <h4>Name (required)</h4>
+        <input type="text" id="name" class="form-control" required>
+        <h4>Link to photo image (required)</h4>
+        <input type="text" id="img-link" class="form-control" required>
+        <hr>
+<!-- surrvey questions -->
+        <h3>Question 1</h3>
+        <h4>I wear a lot of black</h4>
+        <select class="form-control" id="q1">
+            <option selected value="">Choose an Option</option>
+            <option value="1">1 (Strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly agree)</option>
+        </select>
+
+        <h3>Question 2</h3>
+        <h4>I put a lot of effort into my appearance</h4>
+        <select class="form-control" id="q2">
+            <option selected value="">Choose an Option</option>
+            <option value="1">1 (Strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly agree)</option>
+        </select>
+
+        <h3>Question 3</h3>
+        <h4>I find it easy to get others to do what I want</h4>
+        <select class="form-control" id="q3">
+            <option selected value="">Choose an Option</option>
+            <option value="1">1 (Strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly agree)</option>
+        </select>
+
+        <h3>Question 4</h3>
+        <h4>I spend a lot of time worrying what other people think of me</h4>
+        <select class="form-control" id="q4">
+            <option selected value="">Choose an Option</option>
+            <option value="1">1 (Strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly agree)</option>
+        </select>
+
+        <h3>Question 5</h3>
+        <h4>I am popular at school</h4>
+        <select class="form-control" id="q5">
+            <option selected value="">Choose an Option</option>
+            <option value="1">1 (Strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly agree)</option>
+        </select>
+
+        <h3>Question 6</h3>
+        <h4>I have a lot of school spirit</h4>
+        <select class="form-control" id="q6">
+            <option selected value="">Choose an Option</option>
+            <option value="1">1 (Strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly agree)</option>
+        </select>
+
+        <h3>Question 7</h3>
+        <h4>I do excellent forgery</h4>
+        <select class="form-control" id="q7">
+            <option selected value="">Choose an Option</option>
+            <option value="1">1 (Strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly agree)</option>
+        </select>
+
+        <h3>Question 8</h3>
+        <h4>I enjoy explosives</h4>
+        <select class="form-control" id="q8">
+            <option selected value="">Choose an Option</option>
+            <option value="1">1 (Strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly agree)</option>
+        </select>
+
+        <h3>Question 9</h3>
+        <h4>I think it is more important to be popular than to be liked</h4>
+        <select class="form-control" id="q9">
+            <option selected value="">Choose an Option</option>
+            <option value="1">1 (Strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly agree)</option>
+        </select>
+
+        <h3>Question 10</h3>
+        <h4>I am only happy if I get my way</h4>
+        <select class="form-control" id="q10">
+            <option selected value="">Choose an Option</option>
+            <option value="1">1 (Strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly agree)</option>
+        </select>
+
+        <br>
+        <br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit">Submit</button>
+
+        <hr>
+        <footer>
+            <a href="/api/friends">API Friends List</a> | <a href="https://github.com/sarahemaples/FriendFinderr">GitHub Repo</a>
+        </footer>
+    </div>
+
+<!-- modal -->
+<div class="modal fade" id="friend-modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Best Match</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <h2 id="matchName"></h2>
+                <img id="matchImg" src="" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+    </div>
+</div>
+
+    <!-- script -->
+    <script>
+        $("#submit").on("click", function(e){
+            e.preventDefault();
+            // input form validation
+            function allFieldsFilled(){
+                var isValid = true;
+                $(".form-control").each(function(){
+                    if ($(this).val()==""){
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+
+            // storing user input into new object (IF all forms have been filled)
+            if (allFieldsFilled()){
+                var userInput = {
+                    name: $("#name").val().trim(),
+                    photo: $("#img-link").val().trim(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val(),
+                    ]
+                };
+                console.log(userInput);
+            } else {
+                alert("Please fill out all fields!");
+            }
+
+            // post request sends data to ouur friends api
+            $.post("/api/friends", userInput, function(data){
+                $("#matchName").text(data.name);
+                $("#matchImg").attr("src", data.photo);
+
+                $("friend-modal").modal("toggle");
+                
+            });
+        });
+    </script>
+</body>
+</html>
